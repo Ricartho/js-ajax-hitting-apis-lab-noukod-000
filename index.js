@@ -1,5 +1,6 @@
 function displayCommits(){
   const commits = JSON.parse(this.responseText);
+  const commitList = ``;
 }
 
 function getCommits(el){
