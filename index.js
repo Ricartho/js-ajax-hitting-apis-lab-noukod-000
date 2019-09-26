@@ -1,4 +1,4 @@
-document.getElementById('details').addEventListener('click',function getCommits(event){
+const getCommits = document.getElementById('details').addEventListener('click',function(event){
   event.preventDefault();
   const username = event.dataset.user;
   const repository = event.dataset.repo
