@@ -14,5 +14,6 @@ function getRepositories(){
 }
 
 function getCommits(){
-  
+  const username = dataset.user;
+  const repository = dataset.repo
 }
