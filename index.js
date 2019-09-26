@@ -1,11 +1,6 @@
-// const getCommits = document.getElementById('details').addEventListener('click',function(event){
-//   event.preventDefault();
-//   const username = event.dataset.user;
-//   const repository = event.dataset.repo
-//   const req = new XMLHttpRequest();
-//   req.open('GET','https://api.github.com/users/'+username+'/'+repository+'/commits');
-//   req.send();
-// })
+function displayCommits(){
+  const commits = JSON.parse(this.responseText);
+}
 
 function getCommits(el){
   const username = el.dataset.username;
