@@ -12,3 +12,7 @@ function getRepositories(){
   req.send();
   
 }
+
+function getCommits(){
+  
+}
