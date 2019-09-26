@@ -10,6 +10,7 @@ function getCommits(el){
   req.open('GET','https://api.github.com/users/'+username+'/'+repository+'/commits');
   req.send();
 }
+
 function displayRepositories(){
     const repos = JSON.parse(this.responseText);
     const repoList = `<ul>${repos.map(r => '<li><strong>' + r.name +'</strong> by '+ r.owner.login + ' -<a href="https://github.com/'+r.full_name+'" data-repo="'+r.name+'"data-user="'+r.owner.login+'"onclick="getCommits(this)" id="details">Details</a>' + '</li>').join('')}</ul>`;
