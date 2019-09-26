@@ -1,6 +1,6 @@
 function displayRepositories(){
     const repos = JSON.parse(this.responseText);
-    const repoList = `<ul>${repos.map(r => '<li><strong>' + r.name +'</strong> by '+ r.owner.login + ' -<a href="https://github.com/'+r.full_name+'" data-repo=""onsubmit="getCommits()">Details</a>' + '</li>').join('')}</ul>`;
+    const repoList = `<ul>${repos.map(r => '<li><strong>' + r.name +'</strong> by '+ r.owner.login + ' -<a href="https://github.com/'+r.full_name+'" data-repo="'+r.name'"onsubmit="getCommits()">Details</a>' + '</li>').join('')}</ul>`;
    document.getElementById("repositories").innerHTML = repoList;
 }
  
