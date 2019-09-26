@@ -1,5 +1,10 @@
 document.getElementById('details').addEventListener('click',function(event){
   event.preventDefault();
+  const username = event.dataset.user;
+  const repository = event.dataset.repo
+  const req = new XMLHttpRequest();
+  req.open('GET','https://api.github.com/users/'+username+'/'+repository+'/commits');
+  req.send();
 })
 
 function getCommits(el){
