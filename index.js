@@ -1,6 +1,6 @@
 function displayCommits(){
   const commits = JSON.parse(this.responseText);
-  const commitList = `<ul>${commits.map(commit => '<li>'+ commit.commit.author.name +'</li>')}</ul>`;
+  const commitList = `<ul>${commits.map(commit => '<li>'+ commit.commit.author.name +'</li>').join('')}</ul>`;
 }
 
 function getCommits(el){
