@@ -13,7 +13,7 @@ function getRepositories(){
   
 }
 
-document.getElementById('')
+document.getElementById('details')
 function getCommits(el){
   el.preventDefault();
   const username = el.dataset.user;
