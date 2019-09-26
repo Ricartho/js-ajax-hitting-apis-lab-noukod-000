@@ -8,7 +8,7 @@
 // })
 
 function getCommits(el){
-  const username = el.dataset.user;
+  //const username = el.dataset.user;
   const repository = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.open('GET','https://api.github.com/users/'+ username +'/'+ repository +'/commits');
@@ -17,7 +17,7 @@ function getCommits(el){
 
 function displayRepositories(){
     const repos = JSON.parse(this.responseText);
-    const repoList = `<ul>${repos.map(r => '<li><strong>' + r.name +'</strong> by '+ r.owner.login + ' -<a href="https://github.com/'+r.full_name+'" data-repo="'+ r.name +'"data-user="'+ r.owner.login +'"onclick="getCommits(this)" id="details">Details</a>' + '</li>').join('')}</ul>`;
+    const repoList = `<ul>${repos.map(r => '<li><strong>' + r.name +'</strong> by '+ r.owner.login + ' -<a href="https://github.com/'+r.full_name+'" data-repo="'+ r.name +'" onclick="getCommits(this)" id="details">Details</a>' + '</li>').join('')}</ul>`;
    document.getElementById("repositories").innerHTML = repoList;
 }
  
