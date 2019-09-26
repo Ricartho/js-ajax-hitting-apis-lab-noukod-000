@@ -17,5 +17,5 @@ function getCommits(el){
   const username = el.dataset.user;
   const repository = el.dataset.repo
   const req = new XMLHttpRequest();
-  req.open('GET','')
+  req.open('GET','https://api.github.com/users/'+)
 }
