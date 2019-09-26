@@ -8,7 +8,7 @@
 // })
 
 function getCommits(el){
-  el.preventDefault();
+ 
   const username = el.dataset.user;
   const repository = el.dataset.repo
   const req = new XMLHttpRequest();
