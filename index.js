@@ -1,4 +1,4 @@
-document.getElementById('details',function(event){
+document.getElementById('details').addEventListener('click',function(event){
   event.preventDefault();
 })
 
