@@ -7,14 +7,14 @@ document.getElementById('details').addEventListener('click',function(event){
   req.send();
 })
 
-function getCommits(el){
-  el.preventDefault();
-  const username = el.dataset.user;
-  const repository = el.dataset.repo
-  const req = new XMLHttpRequest();
-  req.open('GET','https://api.github.com/users/'+username+'/'+repository+'/commits');
-  req.send();
-}
+// function getCommits(el){
+//   el.preventDefault();
+//   const username = el.dataset.user;
+//   const repository = el.dataset.repo
+//   const req = new XMLHttpRequest();
+//   req.open('GET','https://api.github.com/users/'+username+'/'+repository+'/commits');
+//   req.send();
+// }
 
 function displayRepositories(){
     const repos = JSON.parse(this.responseText);
